@@ -1,0 +1,30 @@
+= sample7: Basic setup using a fabric-a with 2 intermediate cas per server
+
+== Summary
+
+* *Organizations*
+** OrdererOrg
+** Org1
+** Org2
+* *CAs*
+** Each org created a CA root with openssl
+** ca.example.com: ICAs ca-orderer-tls and ca-orderer-msp
+** ca.org1.example.com: ICAs ca-org1-tls and ca-org1-msp
+** ca.org2.example.com: ICAs ca-org2-tls and ca-org2-msp
+* *Orderer services*
+** 1 orderer in OrdererOrg
+** using _solo_ as orderer type
+* *Peer services*
+** 1 peer in Org1
+** 1 peer in Org2
+** using _leveldb_ as state database
+* *Chaincodes*
+** basic deployed in all peers
+* *Apps*
+** rest api running in app container
+** use a connection profile with Org1 information
+
+== Services
+
+* 8080: exposed app
+

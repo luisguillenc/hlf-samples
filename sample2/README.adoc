@@ -1,0 +1,28 @@
+= sample2: Basic setup with couchdb
+
+== Summary
+
+* *Organizations*
+** OrdererOrg
+** Org1
+** Org2
+* *CAs*
+**  we use cryptogen for crypto artifacts
+* *Orderer services*
+** 1 orderer in OrdererOrg
+** using _etcdraft_ as orderer type
+* *Peer services*
+** 1 peer in Org1
+** 1 peer in Org2
+** using _couchdb_ as state database
+* *Chaincodes*
+** basic deployed in all peers
+* *Apps*
+** rest api running in app container
+** use a connection profle with Org1 information
+
+== Services
+
+* 8080: exposed app
+* 5984: couchdb
+

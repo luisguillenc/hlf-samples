@@ -1,0 +1,33 @@
+= sample4: Multipeer and multiorderer setup with couchdb, blockchain explorer and prometheus
+
+== Summary
+
+* *Organizations*
+** OrdererOrg
+** Org1
+** Org2
+* *CAs*
+**  we use cryptogen for crypto artifacts
+* *Orderer services*
+** 1 orderer in OrdererOrg
+** 1 orderer in Org1
+** 1 orderer in Org2
+** using _etcdraft_ as orderer type
+* *Peer services*
+** 3 peer in Org1
+** 3 peer in Org2
+** 1 anchor per Org
+** using _couchdb_ as state database
+* *Chaincodes*
+** basic deployed in all peers
+* *Apps*
+** rest api running in app container
+** use a connection profle with Org1 information
+
+== Services
+
+* 8080: exposed app
+* 8081: blockchain explorer
+* 5984: couchdb
+* 3000: grafana
+

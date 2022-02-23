@@ -1,0 +1,35 @@
+---
+name: test-network-org1
+version: 1.0.0
+client:
+  organization: Org1
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+  tlsCerts:
+    client:
+      key:
+        path: /app/config/tls/client.key
+      cert:
+        path: /app/config/tls/client.crt
+organizations:
+  Org1:
+    mspid: Org1MSP
+    peers:
+    - peer0.org1.example.com
+    certificateAuthorities:
+    - ca.org1.example.com
+peers:
+  peer0.org1.example.com:
+    url: grpcs://peer0.org1.example.com:7051
+    tlsCACerts:
+      path: /app/config/tls/ca.crt
+certificateAuthorities:
+  ca.org1.example.com:
+    url: https://ca.org1.example.com:7054
+    caName: ca-org1-msp
+    tlsCACerts:
+      path: /app/config/tls/ca.crt
+    httpOptions:
+      verify: false

@@ -1,0 +1,22 @@
+# global config
+ global:
+   scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+   evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+
+# A scrape configuration containing exactly one endpoint to scrape:
+ scrape_configs:
+   - job_name: 'prometheus'
+     static_configs:
+       - targets: ['localhost:9090'] 
+   - job_name: 'orderer.org1.example.com'
+     static_configs:
+       - targets: ['orderer.org1.example.com:9443'] 
+   - job_name: 'peer0.org1.example.com'
+     static_configs:
+       - targets: ['peer0.org1.example.com:9443'] 
+   - job_name: 'peer1.org1.example.com'
+     static_configs:
+       - targets: ['peer1.org1.example.com:9443'] 
+   - job_name: 'peer2.org1.example.com'
+     static_configs:
+       - targets: ['peer2.org1.example.com:9443'] 

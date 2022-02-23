@@ -1,0 +1,27 @@
+= sample1: Basic setup
+
+== Summary
+
+* *Organizations*
+** OrdererOrg
+** Org1
+** Org2
+* *CAs*
+**  we use cryptogen for crypto artifacts
+* *Orderer services*
+** 1 orderer in OrdererOrg
+** using _solo_ as orderer type
+* *Peer services*
+** 1 peer in Org1
+** 1 peer in Org2
+** using _leveldb_ as state database
+* *Chaincodes*
+** basic deployed in all peers
+* *Apps*
+** rest api running in app container
+** use a connection profle with Org1 information
+
+== Services
+
+* 8080: exposed app
+
