@@ -1,0 +1,22 @@
+= Hyperledger Fabric configuration examples
+
+* *sample1*: Basic setup
+* *sample2*: Basic setup with couchdb
+* *sample3*: Multipeer setup with couchdb and blockchain explorer
+* *sample4*: Multipeer and multiorderer setup with couchdb, blockchain explorer and prometheus (it only works with a hacked version of cryptogen"
+* *sample5*: Basic setup using a fabric-a simple scenario
+* *sample6*: Basic setup using a fabric-a with 2 ca root per server
+* *sample7*: Basic setup using a fabric-a with 2 intermediate cas per server
+* *sample8*: Basic setup using a fabric-a with 2 intermediate cas per server and 2 root per org
+* *sample9*: Same as sample 8 but with TLS mutual authentication
+
+To test the samples, you must run the next sequence:
+
+----
+cd samplex
+./pre.sh
+./start.sh
+./test-app.sh
+./stop.sh
+./clean.sh
+----
